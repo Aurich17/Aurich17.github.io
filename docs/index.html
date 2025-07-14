@@ -3,64 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Portafolio - Tu Nombre</title>
+  <title>Portafolio - Ismael Chumpitaz Torres</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; color: #333; line-height: 1.6; }
-    header { background: #f4f4f4; padding: 2rem 1rem; text-align: center; }
-    header h1 { margin: 0; font-size: 2.5rem; }
-    header p { font-size: 1.2rem; color: #555; }
-    .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
-    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-    .card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.2s; background: #fff; }
-    .card:hover { transform: translateY(-4px); }
-    .card img { width: 100%; height: 160px; object-fit: cover; }
-    .card-content { padding: 1rem; }
-    .card-content h3 { margin-top: 0; font-size: 1.4rem; }
-    .card-content p { margin: 0.5rem 0 1rem; color: #666; }
-    .card-content a { display: inline-block; text-decoration: none; color: #007acc; font-weight: bold; }
-    footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: #777; }
+    :root {
+      --primary-color: #3f51b5;
+      --accent-color: #ff4081;
+      --bg-light: #f9f9f9;
+      --text-dark: #333;
+      --transition: 0.3s;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', sans-serif; color: var(--text-dark); background: var(--bg-light); line-height: 1.6; }
+    header {
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      color: #fff;
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    header h1 { font-size: 3rem; font-weight: 600; }
+    header p { margin-top: 0.5rem; font-size: 1.2rem; opacity: 0.9; }
+    .container { max-width: 960px; margin: 4rem auto; padding: 0 1rem; }
+    h2 { font-size: 2rem; margin-bottom: 1rem; position: relative; display: inline-block; }
+    h2::after { content: ''; position: absolute; width: 50px; height: 4px; background: var(--accent-color); bottom: -8px; left: 0; border-radius: 2px; }
+    .intro p { max-width: 700px; margin-top: 1rem; opacity: 0.8; }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transform: translateY(0);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 24px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%; height: 180px;
+      object-fit: cover;
+      transition: transform var(--transition);
+    }
+    .card:hover img { transform: scale(1.05); }
+    .card-content { padding: 1.5rem; }
+    .card-content h3 { font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--primary-color); }
+    .card-content p { font-size: 0.95rem; opacity: 0.75; margin-bottom: 1rem; }
+    .card-content a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      background: var(--primary-color);
+      color: #fff;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: background var(--transition);
+    }
+    .card-content a:hover { background: var(--accent-color); }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      background: #fff;
+      margin-top: 4rem;
+    }
+    footer a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.5rem; }
+      .container { margin: 2rem auto; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Tu Nombre</h1>
+    <h1>Ismael Chumpitaz Torres</h1>
     <p>Desarrollador Web Angular | 3 años de experiencia</p>
   </header>
 
-  <section class="container">
+  <section class="container intro">
     <h2>Sobre mí</h2>
-    <p>Soy un desarrollador web especializado en Angular. Me apasiona crear aplicaciones escalables, limpias y con excelente experiencia de usuario. Aquí puedes ver algunos de mis proyectos destacados:</p>
+    <p>¡Hola! Soy un apasionado desarrollador web especializado en Angular. Me enfoco en crear aplicaciones limpias, escalables y con una experiencia de usuario fluida. Disfruto resolver problemas complejos y aprender nuevas tecnologías día a día.</p>
   </section>
 
   <section class="container">
     <h2>Proyectos Destacados</h2>
     <div class="projects">
-      <!-- Proyecto 1 -->
       <div class="card">
-        <img src="./gestión-veterinaria/preview.png" alt="Gestión Veterinaria" />
+        <img src="./gestion-veterinaria/preview.png" alt="Gestión Veterinaria" />
         <div class="card-content">
           <h3>Sistema de Gestión Veterinaria</h3>
-          <p>CRUD de pacientes, calendario de citas y generación de facturas.</p>
+          <p>CRUD de pacientes, calendario interactivo de citas y generación de facturas en PDF.</p>
           <a href="./gestion-veterinaria/">Ver demo</a>
         </div>
       </div>
 
-      <!-- Proyecto 2 -->
       <div class="card">
         <img src="./tienda-online/preview.png" alt="Tienda Online" />
         <div class="card-content">
           <h3>Tienda E-commerce Básica</h3>
-          <p>Catálogo, carrito de compras y checkout con pasarela de pago.</p>
+          <p>Catálogo de productos, carrito de compras y checkout con pasarela de pago integrada.</p>
           <a href="./tienda-online/">Ver demo</a>
         </div>
       </div>
 
-      <!-- Añade más cards según tus proyectos -->
+      <!-- Más cards según tus proyectos -->
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Tu Nombre. <a href="mailto:tu-email@example.com">tu-email@example.com</a>
+    &copy; 2025 Ismael Chumpitaz Torres. <a href="mailto:chumpitazismael7@gmail.com">chumpitazismael7@gmail.com</a>
   </footer>
 </body>
 </html>
