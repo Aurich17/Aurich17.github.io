@@ -2,6 +2,10 @@
   "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
+    "build:tienda-online":       "ng build tienda-online",
+    "build:gestion-veterinaria": "ng build gestion-veterinaria",
+    "build:all":                "npm run build:tienda-online && npm run build:gestion-veterinaria",
+    "deploy":                   "npm run build:all && git add docs && git commit -m \"deploy docs\" && git push",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

@@ -5,47 +5,39 @@
   "projects": {
     "tienda-online": {
       "projectType": "application",
-      "schematics": {},
       "root": "projects/tienda-online",
       "sourceRoot": "projects/tienda-online/src",
       "prefix": "app",
+      "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tienda-online",
+            "outputPath": "docs/tienda-online",
             "index": "projects/tienda-online/src/index.html",
-            "browser": "projects/tienda-online/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "main": "projects/tienda-online/src/main.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/tienda-online/tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/tienda-online/public"
+                "input": "projects/tienda-online/public",
+                "output": ""
               }
             ],
-            "styles": [
-              "projects/tienda-online/src/styles.css"
-            ],
-            "scripts": []
+            "styles": ["projects/tienda-online/src/styles.css"],
+            "scripts": [],
+            "baseHref": "/tienda-online/"
           },
           "configurations": {
             "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
               "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
-                }
-              ],
-              "outputHashing": "all"
+                { "type": "initial",           "maximumWarning": "500kB", "maximumError": "1MB" },
+                { "type": "anyComponentStyle", "maximumWarning": "4kB",   "maximumError": "8kB" }
+              ]
             },
             "development": {
               "optimization": false,
@@ -57,13 +49,12 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "tienda-online:build"
+          },
           "configurations": {
-            "production": {
-              "buildTarget": "tienda-online:build:production"
-            },
-            "development": {
-              "buildTarget": "tienda-online:build:development"
-            }
+            "production":  { "browserTarget": "tienda-online:build:production" },
+            "development": { "browserTarget": "tienda-online:build:development" }
           },
           "defaultConfiguration": "development"
         },
@@ -73,20 +64,16 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js","zone.js/testing"],
             "tsConfig": "projects/tienda-online/tsconfig.spec.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/tienda-online/public"
+                "input": "projects/tienda-online/public",
+                "output": ""
               }
             ],
-            "styles": [
-              "projects/tienda-online/src/styles.css"
-            ],
+            "styles": ["projects/tienda-online/src/styles.css"],
             "scripts": []
           }
         }
@@ -94,47 +81,39 @@
     },
     "gestion-veterinaria": {
       "projectType": "application",
-      "schematics": {},
       "root": "projects/gestion-veterinaria",
       "sourceRoot": "projects/gestion-veterinaria/src",
       "prefix": "app",
+      "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gestion-veterinaria",
+            "outputPath": "docs/gestion-veterinaria",
             "index": "projects/gestion-veterinaria/src/index.html",
-            "browser": "projects/gestion-veterinaria/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "main": "projects/gestion-veterinaria/src/main.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/gestion-veterinaria/tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/gestion-veterinaria/public"
+                "input": "projects/gestion-veterinaria/public",
+                "output": ""
               }
             ],
-            "styles": [
-              "projects/gestion-veterinaria/src/styles.css"
-            ],
-            "scripts": []
+            "styles": ["projects/gestion-veterinaria/src/styles.css"],
+            "scripts": [],
+            "baseHref": "/gestion-veterinaria/"
           },
           "configurations": {
             "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
               "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
-                }
-              ],
-              "outputHashing": "all"
+                { "type": "initial",           "maximumWarning": "500kB", "maximumError": "1MB" },
+                { "type": "anyComponentStyle", "maximumWarning": "4kB",   "maximumError": "8kB" }
+              ]
             },
             "development": {
               "optimization": false,
@@ -146,13 +125,12 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "gestion-veterinaria:build"
+          },
           "configurations": {
-            "production": {
-              "buildTarget": "gestion-veterinaria:build:production"
-            },
-            "development": {
-              "buildTarget": "gestion-veterinaria:build:development"
-            }
+            "production":  { "browserTarget": "gestion-veterinaria:build:production" },
+            "development": { "browserTarget": "gestion-veterinaria:build:development" }
           },
           "defaultConfiguration": "development"
         },
@@ -162,20 +140,16 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js","zone.js/testing"],
             "tsConfig": "projects/gestion-veterinaria/tsconfig.spec.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/gestion-veterinaria/public"
+                "input": "projects/gestion-veterinaria/public",
+                "output": ""
               }
             ],
-            "styles": [
-              "projects/gestion-veterinaria/src/styles.css"
-            ],
+            "styles": ["projects/gestion-veterinaria/src/styles.css"],
             "scripts": []
           }
         }

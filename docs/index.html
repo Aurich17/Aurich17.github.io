@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portafolio - Tu Nombre</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; color: #333; line-height: 1.6; }
+    header { background: #f4f4f4; padding: 2rem 1rem; text-align: center; }
+    header h1 { margin: 0; font-size: 2.5rem; }
+    header p { font-size: 1.2rem; color: #555; }
+    .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.2s; background: #fff; }
+    .card:hover { transform: translateY(-4px); }
+    .card img { width: 100%; height: 160px; object-fit: cover; }
+    .card-content { padding: 1rem; }
+    .card-content h3 { margin-top: 0; font-size: 1.4rem; }
+    .card-content p { margin: 0.5rem 0 1rem; color: #666; }
+    .card-content a { display: inline-block; text-decoration: none; color: #007acc; font-weight: bold; }
+    footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: #777; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tu Nombre</h1>
+    <p>Desarrollador Web Angular | 3 años de experiencia</p>
+  </header>
+
+  <section class="container">
+    <h2>Sobre mí</h2>
+    <p>Soy un desarrollador web especializado en Angular. Me apasiona crear aplicaciones escalables, limpias y con excelente experiencia de usuario. Aquí puedes ver algunos de mis proyectos destacados:</p>
+  </section>
+
+  <section class="container">
+    <h2>Proyectos Destacados</h2>
+    <div class="projects">
+      <!-- Proyecto 1 -->
+      <div class="card">
+        <img src="./gestión-veterinaria/preview.png" alt="Gestión Veterinaria" />
+        <div class="card-content">
+          <h3>Sistema de Gestión Veterinaria</h3>
+          <p>CRUD de pacientes, calendario de citas y generación de facturas.</p>
+          <a href="./gestion-veterinaria/">Ver demo</a>
+        </div>
+      </div>
+
+      <!-- Proyecto 2 -->
+      <div class="card">
+        <img src="./tienda-online/preview.png" alt="Tienda Online" />
+        <div class="card-content">
+          <h3>Tienda E-commerce Básica</h3>
+          <p>Catálogo, carrito de compras y checkout con pasarela de pago.</p>
+          <a href="./tienda-online/">Ver demo</a>
+        </div>
+      </div>
+
+      <!-- Añade más cards según tus proyectos -->
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Tu Nombre. <a href="mailto:tu-email@example.com">tu-email@example.com</a>
+  </footer>
+</body>
+</html>
