@@ -21,11 +21,6 @@ yarn-error.log
 *.sublime-workspace
 
 # Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 .history/*
 
 # Miscellaneous
@@ -44,3 +39,6 @@ Thumbs.db
 # ──────────────────────────────────────────────────────────────────────────────
 # Ignorar TODO el código fuente de tus sub-proyectos
 /projects/
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
